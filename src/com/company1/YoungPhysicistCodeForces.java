@@ -2,29 +2,29 @@ package com.company1;
 import java.util.Scanner;
 
 public class YoungPhysicistCodeForces {
-    public static String isEquilibrium(int sum, int sumX, int sumY, int sumZ){
-        if (sum == 0 && sumX == 0 && sumY == 0 && sumZ == 0)
-            return "YES";
-        return "NO";
+    public static String isEquilibrium(int [][] array2D, int n){
+        for( int i=0; i<3; i++){
+            int sum=0;
+            for(int j=0; j<n; j++){
+                sum+=array2D[j][i];
+            }
+            if(sum == 0)
+                return "YES";
+            return "NO";
+        }
+    return "NO";
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
 
-        int sum = 0;
-        int sumX = 0; int sumY = 0; int sumZ = 0;
-
-        for(int i=0; i<n; i++){
-            int x = input.nextInt();
-            int y = input.nextInt();
-            int z = input.nextInt();
-
-            sum += x + y + z;
-            sumX += x;
-            sumY += y;
-            sumZ += z;
+        int array2D[][] = new int[n][3];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 3; j++) {
+                array2D[i][j] = input.nextInt();
+            }
         }
-        System.out.println(isEquilibrium(sum, sumX, sumY, sumZ));
+        System.out.println(isEquilibrium(array2D, n));
     }
 }
