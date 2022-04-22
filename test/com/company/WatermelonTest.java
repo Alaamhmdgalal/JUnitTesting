@@ -21,5 +21,10 @@ public class WatermelonTest {
         Watermelon tester = new Watermelon();
         assertEquals("NO", tester.isEven(2));
     }
+    @Test
+    public void test4(){
+        Watermelon tester = new Watermelon();
+        assertEquals("NO", tester.isEven(0));
+    }
 
 }
