@@ -26,5 +26,24 @@ public class WatermelonTest {
         Watermelon tester = new Watermelon();
         assertEquals("NO", tester.isEven(0));
     }
-
+    @Test
+    public void test5(){
+        Watermelon tester = new Watermelon();
+        assertEquals("Invalid input", tester.isEven(-6));
+    }
+    @Test
+    public void test6(){
+        Watermelon tester = new Watermelon();
+        assertEquals("Invalid input", tester.isEven(-3));
+    }
+    @Test
+    public void test7(){
+        Watermelon tester = new Watermelon();
+        assertEquals("Invalid input", tester.isEven(101));
+    }
+    @Test
+    public void test8(){
+        Watermelon tester = new Watermelon();
+        assertEquals("Invalid input", tester.isEven(102));
+    }
 }
