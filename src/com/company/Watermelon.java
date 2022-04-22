@@ -4,7 +4,7 @@ import java.util.*;
 public class Watermelon {
 
     public static String isEven(int n){
-        if ( n % 2 == 0 && n != 2)
+        if ( n % 2 == 0 && n != 2 && n != 0)
             return "YES";
         return "NO";
     }
