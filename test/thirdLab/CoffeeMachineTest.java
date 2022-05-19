@@ -24,14 +24,9 @@ class CoffeeMachineTest {
             assertEquals("Preparing Coffee", cm.busy());
         }
         @Test
-        public void test_isBusy_function(){
+        public void test_type_function(){
             cm.start(1);
-            assertFalse(cm.isBusy());  //the user clicked in coffee once so the machine was not busy before him
-        }
-        @Test
-        public void test_integrated_money_function(){
-            cm.start(1);
-            assertEquals("Empty", cm.money());
+            assertEquals("Coffee", cm.type(0));
         }
     }
 
@@ -44,14 +39,14 @@ class CoffeeMachineTest {
             assertEquals("Busy", cm.busy());
         }
         @Test
-        public void test_isBusy_function2(){
+        public void test_prep_function2(){
             cm.start(2);
-            assertTrue(cm.isBusy());
+            assertEquals("Error", cm.prep());
         }
         @Test
-        public void test_money_function(){
+        public void test_type_function(){
             cm.start(2);
-            assertEquals("Not empty", cm.money());
+            assertEquals("Error", cm.type(1));
         }
     }
 }

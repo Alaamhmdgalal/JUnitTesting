@@ -2,28 +2,44 @@ package thirdLab;
 
 public class CoffeeMachine {
     int Coffee = 0;
+    int Money = 0;
+    int type = 0;
 
-    public void start(int value){
+    public String start(int value){
         Coffee += value;
+        Money += value;
+        return this.busy();
     }
 
     public String busy(){
-        if (Coffee > 1)
+        if (Coffee > 1) {
+            this.type(type);
             return "Busy";
+        }
         if (Coffee == 0)
             return "Get your coffee";
-        return "Preparing Coffee";
+        return this.prep();
     }
 
-    public boolean isBusy(){
-        if(this.busy() == "Busy")
-            return true;
-        return false;
+    //Stub function
+    public String prep(){
+        if(Coffee == 1)
+            return "Preparing Coffee";
+        return "Error";
     }
 
-    public String money(){
-        if(this.isBusy() == true)
-            return "Not empty";
-        return "Empty";
+    public String type(int type){
+        if(Coffee == 1){
+            switch(type){
+                case 0:
+                    return "Coffee";
+                case 1:
+                    return "Tea";
+                case 2:
+                    return "Espresso";
+            }
+            return "Water";
+        }
+        return this.prep();
     }
 }
