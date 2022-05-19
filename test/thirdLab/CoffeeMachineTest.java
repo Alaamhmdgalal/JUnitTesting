@@ -39,7 +39,7 @@ class CoffeeMachineTest {
             assertEquals("Busy", cm.busy());
         }
         @Test
-        public void test_prep_function2(){
+        public void test_prep_function(){
             cm.start(2);
             assertEquals("Error", cm.prep());
         }
