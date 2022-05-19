@@ -17,7 +17,7 @@ public class CoffeeMachine {
             return "Busy";
         }
         if (Coffee == 0)
-            return "Get your coffee";
+            return "Order your coffee";
         return this.prep();
     }
 

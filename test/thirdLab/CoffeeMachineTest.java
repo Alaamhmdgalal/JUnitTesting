@@ -16,7 +16,7 @@ class CoffeeMachineTest {
     class testSequence1{
         @Test
         public void test_busy_function(){
-            assertEquals("Get your coffee", cm.busy());
+            assertEquals("Order your coffee", cm.busy());
         }
         @Test
         public void test_integrated_busy_function(){
